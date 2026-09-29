@@ -39,8 +39,20 @@ class RecommenderApp:
     def render_recomendacoes(self, selected_user: str, users: dict):
         st.subheader("💡 Recomendações")
         
-        # Botão único que ocupa a largura total para gerar ambas as recomendações
-        if st.button("Gerar Recomendações", type="primary", use_container_width=True):
+        # 1. Busca as avaliações do usuário e conta quantas existem
+        user_ratings = users.get(selected_user, {})
+        qtd_avaliacoes = len(user_ratings)
+        
+        # 2. Verifica se a condição de 5 podcasts foi atingida
+        historico_suficiente = qtd_avaliacoes >= 5
+        
+        # 3. Se não for suficiente, exibe a mensagem de aviso
+        if not historico_suficiente:
+            faltam = 5 - qtd_avaliacoes
+            st.warning(f"⚠️ Para gerar recomendações, você precisa avaliar pelo menos 5 podcasts. Faltam {faltam} avaliações (você tem {qtd_avaliacoes}/5).")
+        
+        # 4. Botão bloqueado (disabled) caso historico_suficiente seja False
+        if st.button("Gerar Recomendações", type="primary", use_container_width=True, disabled=not historico_suficiente):
             
             # Cria as duas colunas somente após o clique do botão
             col_euclidiana, col_minkowski = st.columns(2)
