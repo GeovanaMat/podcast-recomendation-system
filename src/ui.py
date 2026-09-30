@@ -55,7 +55,7 @@ class RecommenderApp:
         if st.button("Gerar Recomendações", type="primary", use_container_width=True, disabled=not historico_suficiente):
             
             # Cria as duas colunas somente após o clique do botão
-            col_euclidiana, col_minkowski = st.columns(2)
+            col_euclidiana, col_manhattan = st.columns(2)
             
             # --- COLUNA 1: EUCLIDIANA ---
             with col_euclidiana:
@@ -71,19 +71,19 @@ class RecommenderApp:
                     ]
                     st.dataframe(df_euclidiana, use_container_width=True)
 
-            # --- COLUNA 2: MINKOWSKI ---
-            with col_minkowski:
-                st.write("**Metodologia: Minkowski (r=3)**")
-                rec_minkowski = self.recommender.recommend_minkowski(selected_user, users, r=3)
+            # --- COLUNA 2: manhattan ---
+            with col_manhattan:
+                st.write("**Metodologia: manhattan (r=3)**")
+                rec_manhattan = self.recommender.recommend_manhattan(selected_user, users, r=3)
                 
-                if not rec_minkowski:
+                if not rec_manhattan:
                     st.info("Não há recomendações disponíveis.")
                 else:
-                    df_minkowski = [
+                    df_manhattan = [
                         {"Podcast": podcast, "Pontuação": round(score, 2)} 
-                        for podcast, score in rec_minkowski
+                        for podcast, score in rec_manhattan
                     ]
-                    st.dataframe(df_minkowski, use_container_width=True)
+                    st.dataframe(df_manhattan, use_container_width=True)
 
     def run(self):
         st.title("Sistema de Recomendação Colaborativo de Podcast")

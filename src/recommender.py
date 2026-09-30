@@ -3,7 +3,7 @@ from math import sqrt
 class Recommender:
     """Implementa o filtro colaborativo baseado em vizinhos mais próximos."""
 
-    # Distância de Minkowski entre dois usuários.
+    # Distância de Manhattan entre dois usuários.
     @staticmethod
     def manhattan(rating1, rating2):
         distance = 0

@@ -137,5 +137,4 @@ Execute a partir da **raiz do projeto**, como módulo:
 python -m src.evaluate
 ```
 
-O script imprime MAE e RMSE (média ± desvio) para as métricas Euclidiana e Minkowski (com `r = 3` no código atual). Para obter os resultados da Manhattan descritos acima, altere `r = 3` para `r = 1` em `src/evaluate.py`. Parâmetros como `mode`, `num_test_users`, `k_neighbors`, `repetitions`, `seed` e `r` podem ser ajustados em `src/evaluate.py`.
-
+O script imprime MAE e RMSE (média ± desvio) para as métricas Euclidiana e Manhattan.
