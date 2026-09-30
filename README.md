@@ -20,8 +20,13 @@ Fonte: [Sistema de recomendação - Nvidia](https://www.nvidia.com/en-us/glossar
 ### Recomendação por vizinhos mais próximos (K-nearest neighbors)
 Na filtragem colaborativa, para encontrar boas recomendaçõe para um usuário, é preciso encontrar outros usuários que possuem comportamentos parecidos, e para isso, precisamos calcular a distância de um usuário a outro para encontrar itens que um usuários avaliou e outro não, e saber quais recomendações são melhores para enviar a um determinado usuário. Será aplicado nesse projeto uma comparação entre dois métodos de calcular a distância entre esses usuários, a Distância Euclidiana e Distância de Minkowski. Esses dois métodos foram escolhidos pela natureza dos dados, que são dados densos e que muito usuário realizaram a avaliação de vários podcasts.
 
+#### Distância Euclidiana
 
+É a medida em linha reta entre dois pontos, como a de uma régua, aplicada a espaços com qualquer quantidade de dimensões. Sua base é o teorema de Pitágoras, que relaciona a hipotenusa aos catetos de um triângulo retângulo. Com n dimensões, a distância entre x e y é:
 
+<img width="598" height="144" alt="image" src="https://github.com/user-attachments/assets/5f925c4b-9e86-45bf-be42-e3740189e9bc" />
+
+Neste trabalho, cada usuário é um ponto no espaço, cada podcast é um eixo e a nota é a posição naquele eixo. Quanto mais próximos dois pontos, mais semelhantes os gostos.
 ## Dados
 ## Método
 ## Resultados
