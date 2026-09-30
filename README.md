@@ -7,7 +7,7 @@ Um sistema de recomendação é um algoritmo de inteligência artificial, que us
 
 Para os sistemas de recomendação funcionar é preciso fazer coleta de dados, e estes dados podem ser explícitos (avaliações, classificações, curtidas e comentários dados pelo usuário) ou implícitos  (comportamento observado, como histórico de navegação, cliques, compras e buscas), não excluindo dados demográficos e psicográficos, para que seja possível encontrar usários com interesses semelhantes. Após isso, os dados são reunidos e armazenados, e podem ser estruturados ou não estruturados. Com esses dados devidamentes organizados e processados, é possível aplicar algoritmos de aprendizado de máquina para detectar padrões e correlações e assim gerar boas recomendações. Por último, realizamos a filtragem, onde são selecionados o itens mais relevantes resultantes da análise, aplicando regras e fórmulas matemáticas que dependem do tipo de mecanismo de recomendação usado. [2](https://www.ibm.com/br-pt/think/topics/recommendation-engine)
 
-Existem vários de algoritmos e técnicas de recomendação, porém será aplicado nesse projeto a Filtragem Colaborativa. 
+Existem vários algoritmos e técnicas de recomendação, porém será aplicado nesse projeto a Filtragem Colaborativa. 
 
 ### Filtragem Colaborativa
 
