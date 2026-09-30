@@ -13,7 +13,7 @@ Existem vários de algoritmos e técnicas de recomendação, porém será aplica
 
 Os algoritmos de filtragem colaborativa recomendam itens (parte "filtragem") com base nas preferências de um grupo de usuários (parte "colaborativa"). Eles exploram a similaridade de comportamento entre os usuários e, a partir das interações anteriores entre usuários e itens, aprendem a prever interações futuras. Assim, se pessoas tomaram decisões parecidas no passado, é alta a probabilidade de concordarem em escolhas futuras, por isso, se o sistema sabe que dois usuários têm gostos semelhantes em filmes, pode recomendar a um deles um filme de que o outro já gosta. [1](https://www.nvidia.com/en-us/glossary/recommendation-system/)
 
-<img width="970" height="972" alt="img-2" src="https://github.com/user-attachments/assets/6e434f45-02a7-49e8-ac0b-4db0d8db5434" />
+<img width="200" height="200" alt="img-2" src="https://github.com/user-attachments/assets/6e434f45-02a7-49e8-ac0b-4db0d8db5434" />
 
 ## Dados
 ## Método
