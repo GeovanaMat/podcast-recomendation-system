@@ -12,7 +12,7 @@ def main():
         # mesma semente => mesmas notas escondidas nas duas métricas (comparação justa)
         result = evaluator.run(users, mode="random", num_test_users=20,
                                k_neighbors=9, top_n=5, repetitions=5, seed=42,
-                               metric=metric, r=3)
+                               metric=metric)
 
         print(f"\n=== {metric} (média ± desvio entre repetições) ===")
         for name, (m, s) in result["summary"].items():

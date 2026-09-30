@@ -15,17 +15,17 @@ class Evaluator:
     """
 
     MODES = ("random", "given_n", "all_but_n")
-    METRICS = ("euclidiana", "minkowski")
+    METRICS = ("euclidiana", "manhattan")
     MIN_KNOWN = 1  # mínimo de notas que o usuário de teste mantém
 
     def __init__(self, recommender, relevance_threshold: float = 4.0):
         self.recommender = recommender
         self.relevance_threshold = relevance_threshold
 
-    def _recommend(self, user, train, k, metric, r):
+    def _recommend(self, user, train, k, metric):
         """Chama o método do Recommender correspondente à métrica escolhida."""
-        if metric == "minkowski":
-            return self.recommender.recommend_minkowski(user, train, r=r, k=k)
+        if metric == "manhattan":
+            return self.recommender.recommend_manhattan(user, train, k=k)
         return self.recommender.recommend_euclidiana(user, train, k=k)
 
     # ---------- divisão treino / teste ----------
@@ -69,7 +69,7 @@ class Evaluator:
         total_hidden = 0
 
         for user, hidden_ratings in hidden.items():
-            recs = self._recommend(user, train, k_neighbors, metric, r)
+            recs = self._recommend(user, train, k_neighbors, metric)
             predicted = dict(recs)
 
             total_hidden += len(hidden_ratings)
