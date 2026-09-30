@@ -22,7 +22,7 @@ Na filtragem colaborativa, para encontrar boas recomendaçõe para um usuário, 
 
 #### Distância Euclidiana
 
-É a medida em linha reta entre dois pontos, como a de uma régua, aplicada a espaços com qualquer quantidade de dimensões [3](https://www.datacamp.com/pt/tutorial/euclidean-distance). Sua base é o teorema de Pitágoras, que relaciona a hipotenusa aos catetos de um triângulo retângulo. Com n dimensões, a distância entre x e y é:
+É a medida em linha reta entre dois pontos, como a de uma régua, aplicada a espaços com qualquer quantidade de dimensões. Sua base é o teorema de Pitágoras, que relaciona a hipotenusa aos catetos de um triângulo retângulo. Com n dimensões, a distância entre x e y é [3](https://www.datacamp.com/pt/tutorial/euclidean-distance):
 
 <img width="598" height="144" alt="image" src="https://github.com/user-attachments/assets/5f925c4b-9e86-45bf-be42-e3740189e9bc" />
 
