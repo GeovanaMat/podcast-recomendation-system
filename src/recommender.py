@@ -5,18 +5,18 @@ class Recommender:
 
     # Distância de Minkowski entre dois usuários.
     @staticmethod
-    def minkowski(rating1, rating2, r):
+    def manhattan(rating1, rating2):
         distance = 0
         commonRatings = False
         for key in rating1:
             if key in rating2:
-                distance += pow(abs(rating1[key] - rating2[key]), r)
+                distance += abs(rating1[key] - rating2[key])
                 commonRatings = True
 
         if commonRatings:
-            return pow(distance, 1/r)  # Retorna a raiz da soma das potências
+            return distance
         else:
-            return 0  # Indica que não há itens em comum
+            return 0
 
     @staticmethod
     def euclidean(rating1, rating2):
@@ -38,8 +38,8 @@ class Recommender:
 
         for user in users:
             if user != username:
-                if metric == 'minkowski':
-                    distance = self.minkowski(users[user], users[username], r)
+                if metric == 'manhattan':
+                    distance = self.manhattan(users[user], users[username])
                 else:
                     distance = self.euclidean(users[user], users[username])
                 
@@ -80,5 +80,5 @@ class Recommender:
 
     # FUNÇÃO 2: Recomendar por Minkowski
     def recommend_minkowski(self, username, users, r=3, k=9):
-        nearest_neighbors = self.compute_nearest_neighbor(username, users, metric='minkowski', r=r, k=k)
+        nearest_neighbors = self.compute_nearest_neighbor(username, users, metric='manhattan', r=r, k=k)
         return self._gerar_recomendacoes_dos_vizinhos(username, users, nearest_neighbors)
