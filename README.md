@@ -15,10 +15,3 @@ Para os sistemas de recomendação funcionar é preciso fazer coleta de dados, e
 ## Conclusão
 ## Inicialização e Excução do Projeto
 
-ciência de dados e aprendizado de máquina e costuma operar em cinco fases:
-
-Coleta de dados. Os dados são a base do sistema. Podem ser explícitos (avaliações, classificações, curtidas e comentários dados pelo usuário) ou implícitos (comportamento observado, como histórico de navegação, cliques, compras e buscas). Também podem entrar dados demográficos e psicográficos, para encontrar usuários semelhantes, e dados sobre os próprios itens, para achar itens relacionados.
-Armazenamento. O tipo de armazenamento depende dos dados coletados: data warehouses reúnem dados de várias fontes para análise, data lakes guardam dados estruturados e não estruturados, e data lakehouses combinam as duas abordagens.
-Análise. Algoritmos de aprendizado de máquina examinam os dados para detectar padrões e correlações e medir a força de cada um. Os modelos podem ser treinados em grandes conjuntos de dados para gerar boas recomendações.
-Filtragem. Seleciona os itens mais relevantes resultantes da análise, aplicando regras e fórmulas matemáticas que dependem do tipo de mecanismo de recomendação usado.
-Refinamento (opcional). Avalia periodicamente os resultados e ajusta o modelo para melhorar continuamente sua precisão e qualidade.
