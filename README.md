@@ -17,6 +17,11 @@ Os algoritmos de filtragem colaborativa recomendam itens (parte "filtragem") com
 
 Fonte: [Sistema de recomendação - Nvidia](https://www.nvidia.com/en-us/glossary/recommendation-system/)
 
+### Recomendação por vizinhos mais próximos
+Na filtragem colaborativa, para encontrar boas recomendaçõe para um usuário, o objetivo é encontrar outros usuários que possuem comportamentos parecidos, e para isso, precisamos calcular a distância de um usuário a outro para encontrar itens que um usuários avaliou e outro não, e saber quais recomendações são melhores para enviar a um determinado usuário. Será aplicado nesse projeto uma comparação entre dois métodos de calcular a distância entre esses usuários, a Distância Euclidiana e Distância de Minkowski. Esses dois métodos foram escolhidos pela natureza dos dados, que são dados densos e que muito usuário realizaram a avaliação de vários podcasts.
+
+
+
 ## Dados
 ## Método
 ## Resultados
