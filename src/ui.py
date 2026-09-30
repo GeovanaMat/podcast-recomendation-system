@@ -73,8 +73,8 @@ class RecommenderApp:
 
             # --- COLUNA 2: manhattan ---
             with col_manhattan:
-                st.write("**Metodologia: manhattan (r=3)**")
-                rec_manhattan = self.recommender.recommend_manhattan(selected_user, users, r=3)
+                st.write("**Metodologia: manhattan**")
+                rec_manhattan = self.recommender.recommend_manhattan(selected_user, users)
                 
                 if not rec_manhattan:
                     st.info("Não há recomendações disponíveis.")

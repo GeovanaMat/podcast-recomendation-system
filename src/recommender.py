@@ -33,7 +33,7 @@ class Recommender:
             return 0
 
     # Encontra os vizinhos mais próximos permitindo escolher a métrica
-    def compute_nearest_neighbor(self, username, users, metric='euclidiana', r=3, k=5):
+    def compute_nearest_neighbor(self, username, users, metric='euclidiana', k=5):
         distances = []
 
         for user in users:
@@ -79,6 +79,6 @@ class Recommender:
         return self._gerar_recomendacoes_dos_vizinhos(username, users, nearest_neighbors)
 
     # FUNÇÃO 2: Recomendar por Manhattan
-    def recommend_manhattan(self, username, users, r=3, k=9):
-        nearest_neighbors = self.compute_nearest_neighbor(username, users, metric='manhattan', r=r, k=k)
+    def recommend_manhattan(self, username, users, k=9):
+        nearest_neighbors = self.compute_nearest_neighbor(username, users, metric='manhattan', k=k)
         return self._gerar_recomendacoes_dos_vizinhos(username, users, nearest_neighbors)
