@@ -78,7 +78,7 @@ class Recommender:
         nearest_neighbors = self.compute_nearest_neighbor(username, users, metric='euclidiana', k=k)
         return self._gerar_recomendacoes_dos_vizinhos(username, users, nearest_neighbors)
 
-    # FUNÇÃO 2: Recomendar por Minkowski
-    def recommend_minkowski(self, username, users, r=3, k=9):
+    # FUNÇÃO 2: Recomendar por Manhattan
+    def recommend_manhattan(self, username, users, r=3, k=9):
         nearest_neighbors = self.compute_nearest_neighbor(username, users, metric='manhattan', r=r, k=k)
         return self._gerar_recomendacoes_dos_vizinhos(username, users, nearest_neighbors)
